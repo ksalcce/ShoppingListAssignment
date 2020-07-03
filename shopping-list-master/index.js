@@ -21,7 +21,7 @@ function handleAddSubmission() {
     $('#js-shopping-list-form').on('submit', event => {
         event.preventDefault();
         event.stopPropagation();
-        let inputVal = $('#shopping-list-entry").val();
+        let inputVal = $('#shopping-list-entry').val();
         $('ul.shopping-list').append(`<li>
         <span class="shopping-item">${inputVal}</span>
         <div class="shopping-item-controls">
