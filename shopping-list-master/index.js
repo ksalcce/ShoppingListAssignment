@@ -4,7 +4,7 @@ function handleCheckClicks() {
     $('ul').on('click', 'button.shopping-item-toggle', event => {
         event.preventDefault();
         event.stopPropagation();
-        $(event.target).closest('li').find('.shopping-item').addClass('shopping-item__checked');
+        $(event.target).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
     });
 }
 
@@ -21,9 +21,9 @@ function handleAddSubmission() {
     $('#js-shopping-list-form').on('submit', event => {
         event.preventDefault();
         event.stopPropagation();
-        let inputVal = $(".js-shopping-list-entry").val();
+        let inputVal = $('#shopping-list-entry").val();
         $('ul.shopping-list').append(`<li>
-        <span class="shopping-item">${'inputVal'}</span>
+        <span class="shopping-item">${inputVal}</span>
         <div class="shopping-item-controls">
           <button class="shopping-item-toggle">
             <span class="button-label">check</span>
